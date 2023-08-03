@@ -27,4 +27,9 @@ class Greet{
 	public String greet(@RequestParam String name){
 		return "hello : " + name + helloService.doService();
 	}
+
+	@GetMapping("/")
+	public String greet(){
+		return "hello : User " + helloService.doService();
+	}
 }
